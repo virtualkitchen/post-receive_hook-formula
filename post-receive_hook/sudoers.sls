@@ -1,4 +1,4 @@
-{% from "post-receive-hook/map.jinja" import sudoers_githook with context %}
+{% from "post-receive_hook/map.jinja" import sudoers_githook with context %}
 
 {% do sudoers_githook.update(pillar.get('post-receive_sudo', {})) %}
 # do sudoers_githook
