@@ -11,6 +11,6 @@
     - mode: 440
     - template: jinja
     - source: salt://post-receive-hook/files/sudoers
-    - check_cmd: {{ sudoers_githook.get('exec-prefix', '/usr/sbin') }}/visudo -c -f
+    - check_cmd: {{ sudoers_githook.get('exec-prefix', '/usr/sbin') }}/visudo -c -f /etc/sudoers.d/githook
     - context:
         included: True
